@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hub Démo | ADNOV TOUR</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0a3f70;
+            --accent: #2b40d3;
+            --warning: #fdc533;
+            --bg: #0f172a;
+            --card: #1e293b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            background-image: radial-gradient(circle at top right, rgba(43, 64, 211, 0.1), transparent 400px);
+        }
+
+        .header { text-align: center; margin-bottom: 50px; }
+        .header h1 { font-size: 32px; font-weight: 800; letter-spacing: -1px; margin-bottom: 10px; }
+        .header p { color: #94a3b8; font-size: 16px; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .section-title {
+            grid-column: 1 / -1;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--warning);
+            margin-top: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
+
+        .demo-card {
+            background: var(--card);
+            border-radius: 24px;
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-decoration: none;
+            color: white;
+        }
+
+        .demo-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            background: #24334d;
+        }
+
+        .icon { font-size: 30px; margin-bottom: 15px; }
+        .card-title { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: white; }
+        .card-desc { font-size: 14px; color: #94a3b8; line-height: 1.5; margin-bottom: 20px; }
+
+        .badge-btn {
+            padding: 12px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.05);
+            text-align: center;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--warning);
+            border: 1px solid rgba(253, 197, 51, 0.2);
+        }
+
+        .footer { margin-top: 60px; font-size: 11px; color: #475569; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <p style="color:var(--accent); font-weight:800; font-size:12px; text-transform:uppercase; letter-spacing:3px;">Demo Portal</p>
+        <h1>ADNOV TOUR 2026</h1>
+        <p>Tunnel d'acquisition et de gestion des flux</p>
+    </div>
+
+    <div class="grid">
+        <div class="section-title">Côté Participant (Notaire)</div>
+
+        <a href="index.html" class="demo-card">
+            <div>
+                <div class="icon">📝</div>
+                <div class="card-title">Landing d'Inscription</div>
+                <p class="card-desc">Formulaire d'inscription premium avec synchronisation Brevo en temps réel.</p>
+            </div>
+            <div class="badge-btn">OUVRIR LA PAGE</div>
+        </a>
+
+        <a href="badge.html?email=demo@adnov.fr&prenom=Victor&nom=Demo&etude=ADNOV%20Studio" class="demo-card">
+            <div>
+                <div class="icon">🎟️</div>
+                <div class="card-title">Badge Digital & QR</div>
+                <p class="card-desc">Visualisation du badge personnel généré dynamiquement pour le participant.</p>
+            </div>
+            <div class="badge-btn">VOIR UN EXEMPLE</div>
+        </a>
+
+        <div class="section-title">Côté Accueil (Hôtesse)</div>
+
+        <a href="scan.html" class="demo-card">
+            <div>
+                <div class="icon">📸</div>
+                <div class="card-title">Terminal de Scan</div>
+                <p class="card-desc">Interface de scan caméra pour tablette ou mobile. Déclenche la validation.</p>
+            </div>
+            <div class="badge-btn" style="color:var(--accent); border-color:var(--accent);">LANCER LE SCANNER</div>
+        </a>
+
+        <a href="https://9d65705b.sibforms.com/serve/MUIFAMyGzKFsP_p6Ahvu-Ov190DRV286CKjH4D0wEsSoxtbDyFRF5uWapFtxwnzESDnlC0Ci7s6wLCAVpGMx3DZ6OqxpO3TH4uxsmM7n7-7R8DPyOgltdeLbveH9HlfD9OvrQJcq3ssEPqTKswBfhnunX-bWQsHTaqZQCk1P9lp_ji5YIncK0rRSeFpX0AIJxO7Qc-mmrgZfXJi9dQ==" target="_blank" class="demo-card">
+            <div>
+                <div class="icon">📋</div>
+                <div class="card-title">Liste de Passage</div>
+                <p class="card-desc">Lien direct vers le formulaire Brevo pour les inscriptions manuelles sur place.</p>
+            </div>
+            <div class="badge-btn">FORMULAIRE EXTERNE</div>
+        </a>
+    </div>
+
+    <div class="footer">SECURED BY ADNOV • POWERED BY GEMINI</div>
+
+</body>
+</html>
