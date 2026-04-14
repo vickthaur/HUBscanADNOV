@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>ADNOV TOUR | Hub Expérience</title>
     
+    <link rel="icon" type="image/png" href="favicon.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <style>
@@ -36,7 +38,7 @@
 
         .hub-container {
             width: 100%;
-            max-width: 900px;
+            max-width: 1000px; /* Un peu agrandi pour accueillir la 3ème carte confortablement */
             padding: 20px;
             text-align: center;
             z-index: 1;
@@ -45,7 +47,7 @@
         .header { margin-bottom: 40px; animation: fadeInDown 1s ease; }
         
         .header h1 { 
-            font-size: clamp(28px, 8vw, 48px); /* S'adapte à la taille de l'écran */
+            font-size: clamp(28px, 8vw, 48px); 
             font-weight: 800; 
             letter-spacing: -1.5px; 
             background: linear-gradient(to right, #fff, #94a3b8);
@@ -120,12 +122,11 @@
             font-weight: 800;
             font-size: 13px;
             transition: 0.3s;
-            margin-top: auto; /* Pousse le bouton vers le bas */
+            margin-top: auto;
         }
 
         .hero-card:hover .btn-action { background: var(--warning); }
 
-        /* Correction pour les très petits écrans (iPhone SE, etc.) */
         @media (max-width: 350px) {
             .hero-card { padding: 20px; }
             .header h1 { font-size: 24px; }
@@ -178,6 +179,14 @@
                 <h2 class="card-title">Terminal de Scan</h2>
                 <p style="color: #94a3b8; font-size: 13px; margin-bottom: 25px;">Outil de contrôle d'accès intelligent avec validation Brevo en temps réel.</p>
                 <div class="btn-action">ACTIVER LE SCANNER</div>
+            </a>
+
+            <a href="https://vickthaur.github.io/ADNOVTOUR/stats.html" class="hero-card">
+                <div class="card-tag">Parcours Régie</div>
+                <div class="icon-box">📊</div>
+                <h2 class="card-title">Dashboard Live</h2>
+                <p style="color: #94a3b8; font-size: 13px; margin-bottom: 25px;">Suivi en temps réel des statistiques d'inscriptions et de présences sur site.</p>
+                <div class="btn-action">VOIR LES STATS</div>
             </a>
         </div>
     </div>
